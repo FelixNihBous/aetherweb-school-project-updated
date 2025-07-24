@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Fascinate+Inline&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Knewave&family=Lilita+One&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,472;1,472&family=Rubik+Spray+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chewy&family=Rubik+Spray+Paint&display=swap');
+
+.bubble-gum-sans {
+    font-family: "Bubblegum Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navigation-Buttons {
+    gap: 50px;
+    display: flex;
+}
+
+.navigation-Buttons a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.navigation-Buttons a:hover {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    transform: translateY(-2px);
+}
+
+.LogoName {
+    font-size: 30px;
+    line-height: 0px;
+    color: black;
+}
+
+.header-bar {
+    display: flex;
+    flex-direction: row;
+    padding: 25px 90px 25px 90px;
+    align-items: center;
+    background-color: #ffdf5e;
+    color: #1800ad;
+    justify-content: space-between;
+}
+
+:root {
+    --aether-blue: #1800ad;
+    --aether-yellow: #ffdf5e;
+    --aether-white: #ffffff;
+}
+
+.landingPage-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #ffdf5e;
+    box-sizing: border-box;
+}
+
+.landingPage-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+    padding: 20px;
+}
+
+.landingPage-content-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+}
+
+.landingPage-body h2 {
+    font-family: "Inter", "Manrope", sans-serif;
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 800;
+    color: var(--aether-blue);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.landingPage-content-text p {
+    font-family: "Inter", "Manrope", sans-serif;
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.landingPage-image {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    padding: 20px;
+}
+
+/* Gaya untuk tombol Call-to-Action */
+.cta-button {
+    background-color: #ffffff;
+    color: var(--aether-blue);
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+    .landingPage-content {
+        flex-direction: row;
+        /* Tata letak baris untuk layar lebih besar */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .landingPage-content-text {
+        padding-right: 40px;
+        /* Beri ruang antara teks dan gambar */
+    }
+
+    .landingPage-image {
+        max-width: 50%;
+        /* Batasi lebar gambar di desktop */
+    }
+}
+
+/* Media Queries untuk layar yang sangat besar */
+@media (min-width: 1200px) {
+    .landingPage-body {
+        padding: 80px 40px;
+    }
+
+    .landingPage-content-text h2 {
+        font-size: 64px;
+    }
+
+    .landingPage-content-text p {
+        font-size: 22px;
+    }
+}
