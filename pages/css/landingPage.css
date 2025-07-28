@@ -47,12 +47,16 @@
     --aether-white: #ffffff;
 }
 
+.landingPage {
+    height: 100vh;
+    align-items: center;
+
+}
+
 .landingPage-body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    width: 100%;
     background-color: #ffdf5e;
     box-sizing: border-box;
 }
@@ -62,7 +66,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
     max-width: 1200px;
     gap: 40px;
     padding: 20px;
@@ -121,36 +124,38 @@
     transform: translateY(-2px);
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1024px) {
+    .landingPage {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .landingPage {
+        height: 70vh;
+    }
+    .landingPage-content-text {
+        margin-top: 100px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+    }
     .landingPage-content {
         flex-direction: row;
-        /* Tata letak baris untuk layar lebih besar */
         justify-content: space-between;
         align-items: center;
+        height: auto;
     }
 
     .landingPage-content-text {
-        padding-right: 40px;
-        /* Beri ruang antara teks dan gambar */
+        margin-left: 40px;
+        max-width: 50.926vh;
+        margin-bottom: 100px;
     }
 
     .landingPage-image {
         max-width: 50%;
         /* Batasi lebar gambar di desktop */
-    }
-}
-
-/* Media Queries untuk layar yang sangat besar */
-@media (min-width: 1200px) {
-    .landingPage-body {
-        padding: 80px 40px;
-    }
-
-    .landingPage-content-text h2 {
-        font-size: 64px;
-    }
-
-    .landingPage-content-text p {
-        font-size: 22px;
     }
 }

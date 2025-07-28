@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Fascinate+Inline&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Knewave&family=Lilita+One&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,472;1,472&family=Rubik+Spray+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chewy&family=Rubik+Spray+Paint&display=swap');
+
+.container-AboutUs {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.content-aboutus {
+    text-align: left;
+    width: 50.926vh;
+}
+
+.content-aboutus h2 {
+    color: black;
+    font-family: "Inter", "Manrope", sans-serif;
+    font-size: 4.556vh;
+    font-weight: 700;
+}
+
+.content-aboutus p {
+    text-align: left;
+    color: black;
+    font-weight: 500;
+    font-family: "Inter", "Manrope", sans-serif;
+}
+
+@media (max-width: 768px) {
+    .container-AboutUs {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .container-AboutUs .image {
+        width: 200;
+        height: 200;
+    }
+
+    .content-aboutus {
+        width: 50.926vh;
+        padding-left: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content-aboutus h2 {
+        font-size: 4.556vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container-AboutUs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        height: 50vh;
+    }
+    .content-aboutus {
+        max-width: 550px;
+    }
+}

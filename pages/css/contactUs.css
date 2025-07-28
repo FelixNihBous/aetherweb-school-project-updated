@@ -1,9 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Fascinate+Inline&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Knewave&family=Lilita+One&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,472;1,472&family=Rubik+Spray+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chewy&family=Rubik+Spray+Paint&display=swap');
+
 body {
     background-color: #ffdf5e;
+    margin: 0;
+    font-family: "Inter", "Manrope", sans-serif;
+    display: flex;     /* Mengubah body menjadi flex container */
+    justify-content: center; /* Memusatkan children secara horizontal */
+    align-items: center;   /* Memusatkan children secara vertikal */
+    /* --- Akhir Perbaikan --- */
 }
 
-.contact-us-body {
-    width: 100vw;
+.contactUs-container {
+    max-width: 600px;
+    margin: 3rem auto; /* 'auto' pada margin horizontal akan di-override oleh justify-content: center */
+    background: white;
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.contactContainer {
     height: 100vh;
-    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactUs-container h1 {
+    font-weight: 900;
+    font-size: 4.63vh;
+    margin: 0 0 1rem 0;
+    color: #000;
+    text-align: center;
+}
+
+.contactUs-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contactUs-container label {
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 0.3rem;
+}
+
+.contactUs-container input,
+.contactUs-container textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    box-sizing: border-box;
+    background: white;
+}
+
+.contactUs-container button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: center;
+    transition: background-color 0.3s ease;
+    width: 120px;
+}
+
+.contactUs-container button:hover {
+    background-color: #1800ad;
+}
+
+.contactUs-container p.success {
+    color: green;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.contactUs-container p.error {
+    color: red;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.content-Text {
+    width: 46.296vh;
+    display: flex;
+}
+
+.h1-ContactUs {
+    font-size: 50px;
+}
+
+.contactContainer {
+    margin: 4.63vh;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.contactForm {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1024px) {
+    .contactContainer {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactContainer {
+        flex-direction: column;
+        gap: 30px;
+        padding-left: 70px;
+        height: 100vh;
+    }
+
+    .contactForm {
+        margin-right: 20px;
+    }
+
+    .content-Text {
+        max-width: 550px;
+    }
+    .h1-ContactUs {
+        font-size: 4.63vh;
+    }
+    .inputTag {
+        width: 42.296vh;
+    }
+
 }
