@@ -7,6 +7,7 @@ body {
 
 .container-AboutUs {
     display: flex;
+      background-color: #ffdf5e;
     align-items: center;
     text-align: center;
     flex-direction: row;

@@ -12,11 +12,14 @@ body {
 
 .contactUs-container {
     max-width: 600px;
-    margin: 3rem auto; /* 'auto' pada margin horizontal akan di-override oleh justify-content: center */
+    margin: 3rem auto;
+    /* 'auto' pada margin horizontal akan di-override oleh justify-content: center */
     background: white;
     border-radius: 20px;
+    background-color: #ffdf5e;
+
     padding: 2rem 3rem;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
 
@@ -139,9 +142,11 @@ body {
     .content-Text {
         max-width: 550px;
     }
+
     .h1-ContactUs {
         font-size: 4.63vh;
     }
+
     .inputTag {
         width: 42.296vh;
     }
