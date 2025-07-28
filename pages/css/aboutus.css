@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Fascinate+Inline&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Knewave&family=Lilita+One&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,472;1,472&family=Rubik+Spray+Paint&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chewy&family=Rubik+Spray+Paint&display=swap');
 
+body {
+  background-color: #ffdf5e;
+}
+
 .container-AboutUs {
     display: flex;
     align-items: center;

@@ -5,10 +5,9 @@ body {
     background-color: #ffdf5e;
     margin: 0;
     font-family: "Inter", "Manrope", sans-serif;
-    display: flex;     /* Mengubah body menjadi flex container */
-    justify-content: center; /* Memusatkan children secara horizontal */
-    align-items: center;   /* Memusatkan children secara vertikal */
-    /* --- Akhir Perbaikan --- */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contactUs-container {
