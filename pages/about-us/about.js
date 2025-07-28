@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 function aboutus() {
   return (
-    <div id="aboutus-section" className='container-AboutUs w-full'>
+    <div id="aboutus-section" className='container-AboutUs'>
       <div className="content-aboutus">
         <h2 className="">About Us</h2>
         <p className="">

@@ -54,64 +54,26 @@ export default function LandingPage() {
   return (
     <>
       <link rel="icon" href="/Logo.ico" type="image/x-icon" />
-      <div className='landingPage'>
-        <div className='header-bar '>
-          <Link href="/">
-            <p className='LogoName bubble-gum-sans'>AETHER</p>
-          </Link>
+      <div className='header-bar '>
+        <Link href="/">
+          <p className='LogoName bubble-gum-sans'>AETHER</p>
+        </Link>
 
-          {isMobile ? (
-            <>
-              {/* Hamburger menu */}
-              <div
-                className='hamburger-menu'
-                onClick={toggleMenu}
-                aria-label="Toggle navigation menu"
-                role="button"
-                tabIndex={0}
-                onKeyPress={(e) => { if (e.key === 'Enter') toggleMenu(); }}
-              >
-                <div className={`bar1 ${menuOpen ? 'change' : ''}`}></div>
-                <div className={`bar2 ${menuOpen ? 'change' : ''}`}></div>
-                <div className={`bar3 ${menuOpen ? 'change' : ''}`}></div>
-              </div>
-              {/* Navigasi mobile yang akan muncul saat menuOpen */}
-              <div className={`navigation-Buttons ${menuOpen ? 'open' : ''}`}>
-                <a
-                  className='bubble-gum-sans'
-                  style={{ cursor: 'pointer' }}
-                  onClick={() => {
-                    const element = document.getElementById('aboutus-section');
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                    setMenuOpen(false); // Tutup menu setelah navigasi
-                  }}
-                >
-                  About Us
-                </a>
-                <a className='bubble-gum-sans'
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    cursor: 'pointer',
-                    padding: 0
-                  }}
-                  onClick={() => {
-                    const element = document.getElementById('contact-section');
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                    setMenuOpen(false); // Tutup menu setelah navigasi
-                  }}
-                >
-                  Contact Us
-                </a>
-              </div>
-            </>
-          ) : (
-            // Render tombol navigasi standar saat isMobile adalah false (tampilan desktop)
-            <div className='navigation-Buttons'>
+        {isMobile ? (
+          <>
+            <div
+              className='hamburger-menu'
+              onClick={toggleMenu}
+              aria-label="Toggle navigation menu"
+              role="button"
+              tabIndex={0}
+              onKeyPress={(e) => { if (e.key === 'Enter') toggleMenu(); }}
+            >
+              <div className={`bar1 ${menuOpen ? 'change' : ''}`}></div>
+              <div className={`bar2 ${menuOpen ? 'change' : ''}`}></div>
+              <div className={`bar3 ${menuOpen ? 'change' : ''}`}></div>
+            </div>
+            <div className={`navigation-Buttons ${menuOpen ? 'open' : ''}`}>
               <a
                 className='bubble-gum-sans'
                 style={{ cursor: 'pointer' }}
@@ -120,6 +82,7 @@ export default function LandingPage() {
                   if (element) {
                     element.scrollIntoView({ behavior: 'smooth' });
                   }
+                  setMenuOpen(false); // Tutup menu setelah navigasi
                 }}
               >
                 About Us
@@ -136,13 +99,48 @@ export default function LandingPage() {
                   if (element) {
                     element.scrollIntoView({ behavior: 'smooth' });
                   }
+                  setMenuOpen(false); // Tutup menu setelah navigasi
                 }}
               >
                 Contact Us
               </a>
             </div>
-          )}
-        </div>
+          </>
+        ) : (
+          // Render tombol navigasi standar saat isMobile adalah false (tampilan desktop)
+          <div className='navigation-Buttons'>
+            <a
+              className='bubble-gum-sans'
+              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                const element = document.getElementById('aboutus-section');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              About Us
+            </a>
+            <a className='bubble-gum-sans'
+              style={{
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: 0
+              }}
+              onClick={() => {
+                const element = document.getElementById('contact-section');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Contact Us
+            </a>
+          </div>
+        )}
+      </div>
+      <div className='landingPage'>
         <div className='landingPage-body'>
           <div className='landingPage-content'>
             <div className='landingPage-content-text'>
