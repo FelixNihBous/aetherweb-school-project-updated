@@ -149,7 +149,16 @@ export default function LandingPage() {
                 Crafting intuitive interfaces, responsive designs,
                 and seamless user experiences for your business.
               </p>
-              <button className="cta-button">Get a Free Consultation</button>
+              <button 
+                className="cta-button"
+                onClick={() => {
+                  const element = document.getElementById('contact-section');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                  setMenuOpen(false); // Tutup menu setelah navigasi
+                }}
+              >Get a Free Consultation</button>
             </div>
           </div>
         </div>
