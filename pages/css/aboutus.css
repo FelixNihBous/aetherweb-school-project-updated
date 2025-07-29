@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chewy&family=Rubik+Spray+Paint&display=swap');
 
 body {
-  background-color: #ffdf5e;
+    background-color: #ffdf5e;
 }
 
 .container-AboutUs {
     display: flex;
-      background-color: #ffdf5e;
+    background-color: #ffdf5e;
     align-items: center;
     text-align: center;
     flex-direction: row;
@@ -17,7 +17,8 @@ body {
 
 .content-aboutus {
     text-align: left;
-    width: 50.926vh;
+    max-width: 64.815vh;
+    gap: 20px;
 }
 
 .content-aboutus h2 {
@@ -34,28 +35,36 @@ body {
     font-family: "Inter", "Manrope", sans-serif;
 }
 
+.container-AboutUs {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .container-AboutUs {
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+}
+
 @media (max-width: 768px) {
     .container-AboutUs {
         display: flex;
         flex-direction: column;
-        height: 100vh;
-    }
-
-    .container-AboutUs .image {
-        width: 200;
-        height: 200;
+        padding-left: 50px;
     }
 
     .content-aboutus {
-        width: 50.926vh;
-        padding-left: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        width: 44.815vh;
     }
 
     .content-aboutus h2 {
-        font-size: 4.556vh;
+        color: black;
+        font-family: "Inter", "Manrope", sans-serif;
+        font-size: 3.556vh;
+        font-weight: 700;
     }
 }
 
@@ -63,11 +72,9 @@ body {
     .container-AboutUs {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         gap: 50px;
-        height: 100vh;
     }
-    .content-aboutus {
-        max-width: 550px;
+        .content-aboutus {
+        width: 44.815vh;
     }
 }

@@ -13,7 +13,6 @@ body {
 .contactUs-container {
     max-width: 600px;
     margin: 3rem auto;
-    /* 'auto' pada margin horizontal akan di-override oleh justify-content: center */
     background: white;
     border-radius: 20px;
     background-color: #ffdf5e;
@@ -114,41 +113,32 @@ body {
 .contactForm {
     margin: 0;
     padding: 0;
-}
-
-@media (max-width: 1024px) {
-    .contactContainer {
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
+    width: fit-content;
 }
 
 @media (max-width: 768px) {
     .contactContainer {
+        display: flex;
         flex-direction: column;
-        gap: 30px;
-        padding-left: 70px;
-        height: 100vh;
+        padding-left: 50px;
+        justify-content: center;
+        gap: 20px;
     }
 
     .contactForm {
-        margin-right: 20px;
-    }
-
-    .content-Text {
-        max-width: 550px;
-    }
-
-    .h1-ContactUs {
-        font-size: 4.63vh;
+        width: fit-content;
     }
 
     .inputTag {
-        width: 42.296vh;
+        width: 300px;
     }
+}
 
+@media (max-width: 1024px) {
+    .contactContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
 }

@@ -6,202 +6,236 @@ body {
 }
 
 .bubble-gum-sans {
-    font-family: "Bubblegum Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Bubblegum Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
+/* Base navigation-Buttons for desktop */
 .navigation-Buttons {
-    gap: 50px;
-    display: flex;
+  gap: 50px;
+  display: flex; /* Always flex on desktop */
 }
 
 .navigation-Buttons a {
-    text-decoration: none;
-    color: black;
-    font-size: 17px;
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  transition: transform 0.3s ease; /* Add transition for hover effect */
 }
 
 .navigation-Buttons a:hover {
-    text-decoration: none;
-    color: black;
-    font-size: 17px;
-    transform: translateY(-2px);
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  transform: translateY(-2px);
 }
 
 .LogoName {
-    font-size: 30px;
-    line-height: 0px;
-    color: black;
+  font-size: 30px;
+  /* line-height: 0px; */ /* REMOVE OR CHANGE THIS */
+  line-height: 1.2; /* A more appropriate line-height */
+  color: black;
+  word-break: break-word; /* Allows long words to break if necessary */
 }
 
 .header-bar {
-    display: flex;
-    flex-direction: row;
-    padding: 25px 90px 25px 90px;
-    align-items: center;
-    background-color: #ffdf5e;
-    color: #1800ad;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  padding: 25px 90px 25px 90px;
+  align-items: center;
+  background-color: #ffdf5e;
+  color: #1800ad;
+  justify-content: space-between;
+  position: relative; /* Essential for positioning the mobile menu */
+  z-index: 100; /* Ensure header is on top */
 }
 
 :root {
-    --aether-blue: #1800ad;
-    --aether-yellow: #ffdf5e;
-    --aether-white: #ffffff;
+  --aether-blue: #1800ad;
+  --aether-yellow: #ffdf5e;
+  --aether-white: #ffffff;
 }
 
 .landingPage {
-    height: 100vh;
-    align-items: center;
-    display: flex;
-      background-color: #ffdf5e;
-
-    flex-direction: column;
-    justify-content: center;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  background-color: #ffdf5e;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .landingPage-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffdf5e;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffdf5e;
+  box-sizing: border-box;
 }
 
 .landingPage-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    max-width: 1200px;
-    gap: 40px;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1200px;
+  gap: 40px;
+  padding: 20px;
 }
 
 .landingPage-content-text {
-    flex: 1;
-    max-width: 600px;
-    text-align: left;
-    padding: 20px;
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+  padding: 20px;
 }
 
 .landingPage-body h2 {
-    font-family: "Inter", "Manrope", sans-serif;
-    font-size: clamp(32px, 5vw, 56px);
-    font-weight: 800;
-    color: var(--aether-blue);
-    margin-bottom: 20px;
-    line-height: 1.2;
+  font-family: "Inter", "Manrope", sans-serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  color: var(--aether-blue);
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .landingPage-content-text p {
-    font-family: "Inter", "Manrope", sans-serif;
-    font-size: clamp(16px, 2vw, 20px);
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 30px;
+  font-family: "Inter", "Manrope", sans-serif;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 30px;
 }
 
 .landingPage-image {
-    flex: 1;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    padding: 20px;
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  padding: 20px;
 }
 
 /* Gaya untuk tombol Call-to-Action */
 .cta-button {
-    background-color: #ffffff;
-    color: var(--aether-blue);
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: var(--aether-blue);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
-    background-color: #ffffff;
-    transform: translateY(-2px);
+  background-color: #ffffff;
+  transform: translateY(-2px);
 }
 
-@media (max-width: 1024px) {
-    .landingPage {
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+/* --- Hamburger Menu Styles --- */
+.hamburger-menu {
+  display: none; /* Hidden by default on desktop */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 110; /* Ensure it's above other content */
 }
 
+.hamburger-menu .bar1,
+.hamburger-menu .bar2,
+.hamburger-menu .bar3 {
+  width: 100%;
+  height: 3px;
+  background-color: black; /* Color of the bars, matching your text color */
+  transition: all 0.3s ease; /* Smooth transition for animation */
+  border-radius: 2px; /* Slightly rounded bars */
+}
+
+/* Animation for the "X" shape */
+.hamburger-menu .bar1.change {
+  transform: translateY(11px) rotate(-45deg);
+}
+
+.hamburger-menu .bar2.change {
+  opacity: 0; /* Hide the middle bar */
+}
+
+.hamburger-menu .bar3.change {
+  transform: translateY(-11px) rotate(45deg);
+}
+
+
+/* --- Media Query for Mobile (max-width: 768px) --- */
 @media (max-width: 768px) {
-    .landingPage {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .landingPage-content-text {
-        margin-top: 100px;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        display: flex;
-    }
-    .landingPage-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        height: auto;
-    }
+  .landingPage-content {
+    width: 450px;
+  }
 
-    .landingPage-content-text {
-        margin-left: 40px;
-        max-width: 50.926vh;
-        margin-bottom: 100px;
-    }
+  .LogoName {
+    text-align: center;
+    position: relative;
+    left: 50px;
+  }
 
-    .landingPage-image {
-        max-width: 50%;
-        /* Batasi lebar gambar di desktop */
-    }
-}
-@media (max-width: 768px) {
-    .landingPage {
-        height: 70vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .landingPage-content-text {
-        margin-top: 0;
-        margin-left: 0;
-        margin-bottom: 20px;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        display: flex;
-        max-width: 90%;
-    }
-    .landingPage-content {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-    }
+  .landingPage-body {
+    padding-left: 50px;
+  }
 
-    .landingPage-image {
-        max-width: 50%;
-        /* Batasi lebar gambar di desktop */
-    }
+  .landingPage-content-text {
+    width: 400px;
+  }
+
+  /* Show hamburger menu on mobile */
+  .hamburger-menu {
+    display: flex;
+  }
+
+  /* Hide standard navigation buttons on mobile by default */
+  .navigation-Buttons {
+    display: none;
+    flex-direction: column; /* Stack links vertically */
+    position: absolute;
+    top: 100%; /* Position below the header */
+    left: 0;
+    width: 100%;
+    background-color: var(--aether-yellow); /* Matching header background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    z-index: 95; /* Below header, above page content */
+    transform: translateY(-100%); /* Start off-screen (above the header) */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+
+  /* Show mobile menu when 'open' class is applied */
+  .navigation-Buttons.open {
+    display: flex; /* Make it visible */
+    transform: translateY(0); /* Slide into view */
+    opacity: 1;
+  }
+
+  /* Style individual links in mobile menu */
+  .navigation-Buttons a {
+    padding: 0.8rem 2rem;
+    text-align: center;
+    width: 100%;
+    font-size: 20px; /* Slightly larger font for mobile links */
+  }
+
+  .navigation-Buttons a:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Light hover background */
+    transform: none; /* Remove translateY on mobile hover */
+  }
+
+  /* Adjust header padding for mobile if needed */
+  .header-bar {
+    padding: 15px 25px; /* Smaller padding on mobile */
+  }
 }
