@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, useEffect } from 'react';
 import { ContactPopup } from '../contactus/contact'; // Tetap diimpor sesuai kode Anda
 import Head from 'next/head'; // Tetap diimpor sesuai kode Anda
@@ -53,7 +55,6 @@ export default function LandingPage() {
 
   return (
     <>
-      <link rel="icon" href="/Logo.ico" type="image/x-icon" />
       <div className='header-bar '>
         <Link href="/">
           <p className='LogoName bubble-gum-sans'>AETHER</p>
