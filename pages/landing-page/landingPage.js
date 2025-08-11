@@ -138,6 +138,18 @@ export default function LandingPage() {
             >
               Contact Us
             </a>
+            <a className='bubble-gum-sans'
+              style={{
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: 0
+              }}
+              href='https://portofolio.aetherdigital.site'
+              target='_blank'
+            >
+              Portofolio
+            </a>
           </div>
         )}
       </div>
